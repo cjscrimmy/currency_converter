@@ -14,8 +14,8 @@
         {{ currencies }}
         <div>
             <p>
-                <label for="euro-value">Enter amount of Euros to convert:</label>
-                <input id="euro-value" type="number" min="0"/>
+                <label for="euroValue">Enter amount of Euros to convert:</label>
+                <input id="euroValue" type="number" min="0"/>
             </p>
             
             <p>
@@ -27,9 +27,12 @@
     
             </p>
             <p>
-                <button>Convert</button>
+                <button v-on:click="convertFromEuros">Convert</button>
             </p>
-            
+            <div id="convert-from-euro" v-if="conversionFromEurosResult">
+                <h3>Conversion result</h3>
+                The result of the conversion is: {{ conversionFromEurosResult }}
+            </div>
         </div>
     </div>
     
