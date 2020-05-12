@@ -12,6 +12,25 @@
         <br />
         <h2>Converting from Euros</h2>
         {{ currencies }}
+        <div>
+            <p>
+                <label for="euro-value">Enter amount of Euros to convert:</label>
+                <input id="euro-value" type="number" min="0"/>
+            </p>
+            
+            <p>
+                <label for="currency-selecter-from-euros">Choose a currency to convert to:</label>
+                <select id="currency-selecter-from-euros" v-model="selectedCurrency">
+                    <option disabled value ="">Choose a currency</option>
+                    <option v-for="(currency, name) in currencies" :value="name">{{name}}</option>
+                </select>
+    
+            </p>
+            <p>
+                <button>Convert</button>
+            </p>
+            
+        </div>
     </div>
     
 </body>
