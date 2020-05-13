@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     .then(resourses => resourses.json())
                     .then(currencies => this.currencies = currencies.rates)
             },
-            convertFromEuros: function(){
-               return this.euroValue * this.selectedCurrency;
+            convertFromEuros: function(currency){
+               return this.euroValue * currency;
             }
 
         },
